@@ -3,6 +3,8 @@
 .recommenders
 .idea
 RemoteSystemTempFiles/
+*.iml
+
 
 # Compiled class file
 *.class
