@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.atguigu.p2.view&apos; to &apos;com.atguigu.p2.ui&apos;&#x0D;&#x0A;- Original project: &apos;myproject02&apos;&#x0D;&#x0A;- Original element: &apos;myproject02/src/com.atguigu.p2.view&apos;&#x0D;&#x0A;- Renamed element: &apos;myproject02/src/com.atguigu.p2.ui&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.atguigu.p2.view&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.atguigu.p2.view" name="com.atguigu.p2.ui" qualified="false" references="true" stamp="1646094281029" textual="false" version="1.0"/>
+</session>
