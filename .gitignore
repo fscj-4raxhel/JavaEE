@@ -1,3 +1,9 @@
+# IDE
+.metadata
+.recommenders
+.idea
+RemoteSystemTempFiles/
+
 # Compiled class file
 *.class
 
