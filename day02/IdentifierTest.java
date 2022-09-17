@@ -33,5 +33,3 @@ class Hello_${
 }
 
 class staticpublic{}
-
-class 
