@@ -1,65 +1,54 @@
 /*
-Java ¶¨ÒåµÄÊı¾İÀàĞÍ
 
-Ò»¡¢±äÁ¿°´ÕÕÊı¾İÀàĞÍÀ´·Ö
-
-	»ù±¾Êı¾İÀàĞÍ£º
-		ÕûĞÍ£ºbyte \ short \ int \ long
-		¸¡µãĞÍ£º float \ double
-		×Ö·ûĞÍ£º char
-		²¼¶ûĞÍ£º boolean
-	
-	ÒıÓÃÊı¾İÀàĞÍ£º
-		Àà(class)£º
-		½Ó¿Ú(interface)£º
-		Êı×é£¨array£©£º
-		
-
+This class demonstrates the 8 primitive types in Java
 
 */
 
 class VariableTest1{
 
 	public static void main(String[] args){
-	//1. ÕûĞÍ£ºbyte(1 byte) \ short(2 bytes) \ int(4 bytes) \ long(8 bytes)
-	//¢Ù byte·¶Î§£º -128 ~ 127
+	//1. integersï¼šbyte(1 byte) \ short(2 bytes) \ int(4 bytes) \ long(8 bytes)
+	//â‘  range of byteï¼š -128 ~ 127
 	
 	byte b1 = 12;
 	byte b2 = 127;
 	
-	//byte = 128; ±àÒë²»Í¨¹ı
+	//byte = 128; Compiler error: out of range
 	System.out.println(b1);
 	System.out.println(b2);
-	//¢Ú ÉùÃ÷longĞÍ±äÁ¿£¬±ØĞëÒÔl»òL½áÎ²
-	//¢Û Í¨³££¬¶¨ÒåÕûĞÎ±äÁ¿Ê±£¬Ê¹ÓÃintĞÍ
+	//â‘¡ A number literal ends with l or L indicates a long value
+	long l1 = 123l;
+
+	//â‘¢ The default type to represent an integer is int
 	short s1 = 123;
 	
-	//2. ¸¡µãĞÍ£º float (4 bytes) \ double(8 bytes)
-	//¢Ù ¸¡µãĞÍ£¬±íÊ¾´øĞ¡ÊıµãµÄÊıÖµ
-	//¢Ú float±íÊ¾ÊıÖµ·¶Î§±Èlong»¹´ó
+	//2. floatsï¼š float (4 bytes) \ double(8 bytes)
+	//â‘  floats represents numbers with a decimal point
+	//â‘¡ the range of numbers a float (4 bytes) can represent is larger than what a long (8 bytes) can represent
 	
-	double d1 = 123.3;
-	System.out.println(d1 + 1);
-	//¢Û ¶¨ÒåfloatĞÍÊ±±ØĞëÒÔf»òÕßF½áÎ²
-	//¢Ü Í¨³££¬¶¨Òå¸¡µãĞÍ±äÁ¿Ê±£¬Ê¹ÓÃdoubleĞÍ
+	//â‘¢ A number literal ends with f or F indicates a float value
 	float f1 = 12.3F;
 	System.out.println(f1 + 1);
-	
-	//3. ×Ö·ûĞÍ£º char £¨1×Ö·û = 2×Ö½Ú£©
-	//¢Ù ¶¨ÒåcharĞÍ±äÁ¿£¬Í¨³£ÓÃÒ»¶Ô'', ÄÚ²¿Ö»ÄÜĞ´Ò»¸ö×Ö·û
+
+	//â‘£ The default type to represent a float point number is double
+	double d1 = 123.3;
+	System.out.println(d1 + 1);
+
+	//3. charï¼š char ï¼ˆ1 character = 2 byteï¼‰
+	//â‘  A character is usually a single character embraced by a pair of ''.
 	
 	char c1 = 'a';
 	
 	System.out.println(c1);
 	
 	char c2 = '`';
-	char c3 = 'Õı';
-	char c4 = '¨Û';
+	char c3 = 'æ­£';
+	char c4 = 'ã„›';
 	System.out.println(c2);
 	System.out.println(c3);
 	System.out.println(c4);
 	
-	//¢Ú ±íÊ¾·½Ê½£º 1. ÉùÃ÷Ò»¸ö×Ö·û 2.×ªÒå×Ö·û 3.Ö±½ÓÊ¹ÓÃ Unicode ÖµÀ´±íÊ¾×Ö·ûĞÍ³£Á¿
+	//â‘¡ There are three ways to represent a characterï¼š 1. a character 2. escape sequence 3.Unicode value
 	char c5 = '\n';
 	System.out.print("hello" + c5);
 	System.out.println("world");
@@ -67,17 +56,17 @@ class VariableTest1{
 	char c6 = '\u0043';
 	System.out.println(c6);
 	
-	//4. ²¼¶ûĞÍ£º boolean
-	//¢Ù Ö»ÄÜÈ¥Á½¸öÖµÖ®Ò»£ºtrue¡¢false
-	//¢Ú ³¢³¢ÔÚÌõ¼şÅĞ¶Ï¡¢Ñ­»·½á¹¹ÖĞÊ¹ÓÃ
+	//4. booleanï¼š boolean
+	//Either true or false
+
 	boolean bb1 = true;
 	System.out.println(bb1);
 	
 	boolean isMarried = true;
 	if(isMarried){
-		System.out.println("Äã¾Í²»ÄÜ²Î¼Ó\"µ¥Éí\"partyÁË£¡\\nºÜÒÅº¶");
+		System.out.println("Whoops! \\n You can't go on a \"bachelor \"party anymoreï¼");
 	}else{
-		System.out.println("Äã¿ÉÒÔ¶àÌ¸Ì¸Å®ÅóÓÑ£¡");
+		System.out.println("Go on a date!");
 	}
 	
 	

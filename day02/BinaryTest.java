@@ -1,12 +1,11 @@
 /*
-¼ÆËã»úÖÖ²»Í¬½øÖÆµÄÊ¹ÓÃËµÃ÷£º
+Different bases in computer and their representation in Java.
 
-¶ÔÓÚÕûÊý£¬ÓÐËÄÖÖ±íÊ¾·½Ê½£º
-> ¶þ½øÖÆ(binary)£º0,1 £¬Âú2½ø1.ÒÔ0b»ò0B¿ªÍ·¡£
-> Ê®½øÖÆ(decimal)£º0-9 £¬Âú10½ø1¡£
-> °Ë½øÖÆ(octal)£º0-7 £¬Âú8½ø1. ÒÔÊý×Ö0¿ªÍ·±íÊ¾¡£
-> Ê®Áù½øÖÆ(hex)£º0-9¼°A-F£¬Âú16½ø1. ÒÔ0x»ò0X¿ªÍ·±íÊ¾¡£´Ë´¦µÄA-F²»Çø·Ö´óÐ¡Ð´¡£
-Èç£º0x21AF +1= 0X21B0
+1. binaryï¼š0,1 carry for each two. Starts with 0b or 0B in Java
+2. decimal: 0-9
+3. octal: 0-7, carry for each 8. Starts with 0 in Java
+4. hexadecimal: [0-9A-F], carry for each 16. Starts with 0x or 0X. Here a-f and A-F are the same.
+   for example 0x21AF +1= 0X21B0
 
 */
 class BinaryTest{

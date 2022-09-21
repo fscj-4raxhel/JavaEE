@@ -1,33 +1,37 @@
 /*
-±äÁ¿µÄÊ¹ÓÃ
-1. java¶¨Òå±äÁ¿µÄ¸ñÊ½£º Êı¾İÀàĞÍ ±äÁ¿Ãû = ±äÁ¿Öµ£»
+This class demonstrates variables in a nutshell.
 
-2. ËµÃ÷£º
-	¢Ù ±äÁ¿±ØĞëÏÈÉùÃ÷ºóÊ¹ÓÃ
-	¢Ú ±äÁ¿¶¼¶¨ÒåÔÚÆä×÷ÓÃÓòÄÚ¡£ÔÚ×÷ÓÃÓòÄÚ£¬ËüÊÇÓĞĞ§µÄ£¬»»¾ä»°Ëµ£¬³öÁË×÷ÓÃÓò¾ÍÊ§Ğ§ÁË
-	¢Û Í¬Ò»¸ö×÷ÓÃÓòÄÚ£¬²»ÄÜÉùÃ÷Á½¸öÍ¬ÃûµÄ±äÁ¿
+1. Variable declaration in Javaï¼š <type> <name> = <value>ï¼›
+
+2. Noteï¼š
+	â‘  Variables must be declared before being accessed.
+	â‘¡ Variables are accessible within their scopes (embracing {}).
+	â‘¢ Within a scope, a pair of matching {}, no two variables have the same name.
+
 */
 class VariableTest{
 	public static void main(String[] args){
-		//±äÁ¿¶¨Òå
+		//Variable definition = variable declaration + initialization
 		int myAge = 10;
-		//±äÁ¿µÄÊ¹ÓÃ
+		//Accessing variable 
 		System.out.println(myAge);
 		
-		//±àÒë´íÎó£ºÊ¹ÓÃmyNumberÖ®Ç°²¢Î´¶¨Òå¹ımyNumber
+		//Complier errorï¼šmyNumber is not defined.
 		//System.out.println(myNumber);
 		
-		//±äÁ¿µÄÉùÃ÷
+		//Variable declaration
 		int myNumber;
 		
-		//±àÒë´íÎó£ºÊ¹ÓÃmyNumberÖ®Ç°²¢Î´¸³Öµ¹ımyNumber
+		//Complier errorï¼šmyNumber is not initialized.
 		//System.out.println(myNumber);
-		//±äÁ¿µÄ¸³Öµ
+		//å˜é‡çš„èµ‹å€¼
 		myNumber = 1001;
 		
-		//±àÒë²»Í¨¹ı
+		//Complier myClass is not in this scope.
 		//System.out.println(myClass);
 		
+		//Complier myNumber is already declared
+		//int myNumber;
 		
 	}
 	

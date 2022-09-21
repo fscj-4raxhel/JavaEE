@@ -1,24 +1,27 @@
 /*
-»ù±¾Êý¾ÝÀàÐÍÖ®¼äµÄÔËÐÐ¹æÔò£º
+This class demonstrates type casting in Java. boolean type is not considered here because it is
+on its only island. There are two directions of casting:
 
-Ç°Ìá£ºÕâÀïÌÖÂÛµÄÖ»ÊÇ7ÖÖ»ù±¾ÀàÐÍ±äÁ¿¼äµÄÔËËã¡£²»°üº¬booleanÀàÐÍµÄ¡£
-
-1. ×Ô¶¯ÀàÐÍÌáÉý£º
-	½áÂÛ£ºµ±ÈÝÁ¿Ð¡µÄÊý¾ÝÀàÐÍµÄ±äÁ¿ÓëÈÝÁ¿´óµÄÊý¾ÝÀàÐÍµÄ±äÁ¿×öÔËËãÊ±£¬½á¹û×Ô¶¯ÌáÉýÎªÈÝÁ¿´óµÄÊý¾ÝÀàÐÍ¡£
-	byte¡¢short¡¢char ---> int ---> long ---> float ---> double
+1. Widening casting (automatically)ï¼š
+	byteã€shortã€char ---> int ---> long ---> float ---> double
 	
-	ÌØ±ðµÄ£ºµ±byte¡¢short¡¢charÈýÖÖÀàÐÍµÄ±äÁ¿×öÔËËãÊ±£¬½á¹ûÎªintÐÍ
+	Noteï¼šwhen byteã€shortã€char are operands, the result is in an int
 
-2. Ç¿ÖÆÀàÐÍ×ª»»£º
+2. Narrowing casting (manually)ï¼š
+	Use () to manually cast into the embraced type.
 
-ËµÃ÷£º´ËÊ±µÄÈÝÁ¿´óÐ¡Ö¸µÄÊÇ£¬±íÊ¾ÊýµÄ·½Î»µÄ´óºÍÐ¡¡£±ÈÈç£ºfloatÈÝÁ¿Òª´óÓÚlongµÄÈÝÁ¿
+	Noteï¼šCapacity is the range of values that the type can represent. Not the number of bytes this
+	type uses. For example, float(4 bytes) > long(8 bytes)
+	Casting from higher precision type to lower precision type may induce loss of precision.
 
 */
 class VariableTest2{
 	public static void main(String[] args){
+
+		// ***************Widening casting*********************
 		byte b1 = 2;
 		int i1 = 129;
-		//±àÒë²»Í¨¹ý
+		//Compiler error
 		//byte b2 = b1 + i1;
 		int i2 = b1 + i1;
 		System.out.println(i2);
@@ -29,7 +32,7 @@ class VariableTest2{
 		short s1 = 123;
 		double d1 = s1;
 		
-		// ***************ÌØ±ðµÄ*********************
+		// ***************Specially*********************
 		
 		char c1 = 'a';
 		int i3 = 10;
@@ -37,17 +40,31 @@ class VariableTest2{
 		System.out.println(i4);
 		
 		short s2 = 10;
-		//±àÒë²»Í¨¹ý
+		//Compiler error
 		//char c2 = c1 + s2;
 		
 		byte b2 = 10;
-		//±àÒë²»Í¨¹ý
+		//Compiler error
 		//char c3 = c1 + b2;
 		
-		//±àÒë²»Í¨¹ý
+		//Compiler error
 		//short = b2 + s3;
+
+
+		// ***************Narrowing casting*********************
+
+		double d1 = 12.3;
 		
+		int i1 = (int)d1;//truncation
+		System.out.println(i1);
 		
+		//No precision loss
+		long l1 = 123;
+		short s2 = (short)l1;
+		
+		int i2 = 128;
+		byte b = (byte)i2;
+		System.out.println(b);//-128
 		
 	}
 }

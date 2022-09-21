@@ -1,23 +1,28 @@
 /*
-Ç¿ÖÆÀàĞÍ×ª»»£º×Ô¶¯ÀàĞÍÌáÉıµÄÄæÔËËã
-1. ĞèÒªÊ¹ÓÃÇ¿×ª·û()
-2. ×¢Òâµã£ºÇ¿ÖÆÀàĞÍ×ª»»£¬¿ÉÄÜµ¼ÖÂ¾«¶ÈËğÊ§
+	This class demonstrates some common mistakes and edge cases that a Java programmer should be careful with.
 */
 class VariableTest3{
 	public static void main(String[] args){
-	
-		double d1 = 12.3;
+
+		//1. This works but there is an implicit widening type casting.
+		// 123213 is an int (not ending with l) so it will be casted into long then stored into l1
+		long l1 = 123213;
+		System.out.println(l1);
+		//compiler errorï¼šout of range 2123123412341234 is 
+		//long l1 = 2123123412341234;
+		long l2 = 2123123412341234l;
 		
-		int i1 = (int)d1;//½Ø¶Ï²Ù×÷
-		System.out.println(i1);
 		
-		//Ã»ÓĞ¾«¶ÈËğÊ§
-		long l1 = 123;
-		short s2 = (short)l1;
+		//*************************
+		//Compiler error: 12.3 (not ending with f) is by default an double.
+		//float f1 = 12.3;
+
 		
-		int i2 = 128;
-		byte b = (byte)i2;
-		System.out.println(b);//-128
+		//æ•´å‹å¸¸é‡ï¼Œé»˜è®¤ç±»å‹ä¸ºintå‹
+		//æµ®ç‚¹å‹å¸¸é‡ï¼Œé»˜è®¤ç±»å‹ä¸ºdoubleå‹
+		byte b = 12; // This works for value [-128, 127].
 		
+		//byte b1 = b + 1; compiler error: b + 1 is int
+		//float f1 = b + 12.3;compiler error: b + 12.3 is double
 	}
 }
